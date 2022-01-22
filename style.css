@@ -1,16 +1,18 @@
 .fuente{
-    font-family: 'Pacifico', cursive;
+    font-family: 'pacific', cursive;
+    
 }
 .fondo{
-    background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,73,0.9780287114845938) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(252, 165, 208);
+background: linear-gradient(90deg, rgb(143, 173, 228) 0%, rgba(219, 183, 223, 0.978) 35%, rgb(217, 192, 235) 100%);
 }
 .fondobanner{
 
-    background-image: url("img/foto2.jpg");
+    background-image: url("img/fondo.jpg");
         height: 550px;
         background-attachment: fixed;
         background-position: top center;
 
     }
+    
 
