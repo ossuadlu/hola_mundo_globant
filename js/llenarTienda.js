@@ -4,16 +4,16 @@
 
 let productos =[
 
-    {nombre: "cafetera",precio: "300000",foto:" ../imgTienda/tienda1",descripcion: "cafetera para dos personas"},
-    {nombre: "pantuflas", precio: "100000", foto: "../imgTienda/tienda2",descripcion: " comodas, material peluche, termicas" },
-    {nombre: "taser", precio: "250000", foto: "../imgTienda/tienda3", descripcion: "bateria recargable, 110 voltios"},
-    {nombre: "radio AM- FM", precio: "90000", foto: "../imgTienda/tienda4", descripcion: "hermoso radio bluetooh, con auriculares y cargador"},
-    {nombre: "tapabocas r-95", precio: "30000", foto: "../imgTienda/tienda5", descripcion: " lindos diseños comodos r-95"},
-    {nombre: "kit escolar", precio: "50000",foto: "../imgTienda/tienda6", descripcion: "cuaderno, colores, lapiceros, lindos y tiernos motivos"},
-    {nombre: "cubrelecho", precio: "200000",foto: "../imgTienda/tienda7", descripcion:" algodon lindos diseñoa para cama sencilla" },
-    {nombre: "grapadora", precio: "25000",foto: "../imgTienda/tienda8", descripcion:" duo grapadoras portatiles faciles de utilizar"},
-    {nombre: "cojines", precio: "50000",foto: "../imgTienda/tienda9", descripcion:" duo de cojines 100% algodon cubiertos con tela termica"},
-    {nombre: "juego de baño", precio: "150000",foto: "../imgTienda/tienda10", descripcion:" hermosos tapetes para decorar tu baño impermeables"}
+    {nombre: "cafetera",precio: "300000",foto:" ../imgTienda/tienda1.jpg",descripcion: "cafetera para dos personas"},
+    {nombre: "pantuflas", precio: "100000", foto: "../imgTienda/tienda2.jpg",descripcion: " comodas, material peluche, termicas" },
+    {nombre: "taser", precio: "250000", foto: "../imgTienda/tienda3.jpg", descripcion: "bateria recargable, 110 voltios"},
+    {nombre: "radio AM- FM", precio: "90000", foto: "../imgTienda/tienda4.jpg", descripcion: "hermoso radio bluetooh, con auriculares y cargador"},
+    {nombre: "tapabocas r-95", precio: "30000", foto: "../imgTienda/tienda5.jpg", descripcion: " lindos diseños comodos r-95"},
+    {nombre: "kit escolar", precio: "50000",foto: "../imgTienda/tienda6.jpg", descripcion: "cuaderno, colores, lapiceros, lindos y tiernos motivos"},
+    {nombre: "cubrelecho", precio: "200000",foto: "../imgTienda/tienda7.jpg", descripcion:" algodon lindos diseñoa para cama sencilla" },
+    {nombre: "grapadora", precio: "25000",foto: "../imgTienda/tienda8.jpg", descripcion:" duo grapadoras portatiles faciles de utilizar"},
+    {nombre: "cojines", precio: "50000",foto: "../imgTienda/tienda9.jpg", descripcion:" duo de cojines 100% algodon cubiertos con tela termica"},
+    {nombre: "juego de baño", precio: "150000",foto: "../imgTienda/tienda10.jpg", descripcion:" hermosos tapetes para decorar tu baño impermeables"}
 ]
 
 //Rutina para recorrer el arreglo y crear las tarjetas de cada producto
@@ -24,6 +24,11 @@ let productos =[
    //2. Necesito recorrer un arreglo
    productos.forEach(function(producto){
 
+    let pr=document.createElement("img")
+    pr.src=producto.foto
+
+    console.log(producto.foto)
+
     //3. CREAMOS LOS ELEMENTOS NECESARIOS PARA PINTAR LOS PRODUCTOS
     let columna=document.createElement("div")
     columna.classList.add("col")
@@ -32,7 +37,7 @@ let productos =[
     tarjeta.classList.add("card")
     tarjeta.classList.add("h-100")
 
-    let imagenTienda=document.createElement("imgTienda")
+    let imagenTienda=document.createElement("img")
     imagenTienda.classList.add("card-img-top")
     imagenTienda.classList.add("p-3")
     imagenTienda.classList.add("h-100")
@@ -53,6 +58,8 @@ let productos =[
     precio.classList.add("text-center")
     precio.classList.add("text-muted")
     precio.textContent="$"+producto.precio
+
+    let descripcion=document.createElement("h4")
 
     let botonAmpliarInfo=document.createElement("button")
     botonAmpliarInfo.setAttribute("type","button")
