@@ -3,12 +3,15 @@
 import{llenarTienda} from "./llenarTienda.js"
 import {ampliarInfoProducto} from "./ampliarInfoProducto.js"
 import{agregarCarrito} from "./agregarAlCarrito.js"
+import{verCarrito} from "./verCarrito.js"
+
 
 //variables globales dela tienda
 let producto={}
 let carrito=[]
 
-// lLAMO A FUNCION LLENARTIENDA
+
+// LLAMO A FUNCION LLENARTIENDA
 
 llenarTienda()
 
@@ -33,10 +36,12 @@ botonAgregarCarrito.addEventListener("click", function(){
     let cantidadProducto=document.getElementById("cantidadProducto").value
     producto.cantidad=cantidadProducto
 
+    
+
     //agrego el producto al carrito
 
     carrito.push(producto)
-    console.log(carrito)
+    //console.log(carrito)
 
     // oculto modal
     modalInfoProducto.hide()
@@ -45,3 +50,25 @@ botonAgregarCarrito.addEventListener("click", function(){
     agregarCarrito(carrito)
 
 })
+// llamar a funcion ver carrito
+
+    let botonVerCarrito=document.getElementById("botonCarrito")
+    botonVerCarrito.addEventListener("click", function (event){
+        verCarrito(carrito)
+
+    })
+    //detectar clic en el boton de limpiar
+    let botonlimpiar=document.getElementById("botonlimpiar")
+    botonlimpiar.addEventListener("click",function(){
+        
+        let contenedorModal=document.getElementById("contenedorCarrito")
+        contenedorModal.innerHTML=""
+        carrito=[]
+
+        let pildora=document.getElementById("pildora")
+        pildora.innerHTML=""
+        pildora=[]
+
+
+    })
+    

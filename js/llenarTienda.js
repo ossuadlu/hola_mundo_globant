@@ -13,7 +13,7 @@ let productos =[
     {nombre: "cubrelecho", precio: "200000",foto: "../imgTienda/tienda7.jpg", descripcion:" algodon lindos diseñoa para cama sencilla" },
     {nombre: "grapadora", precio: "25000",foto: "../imgTienda/tienda8.jpg", descripcion:" duo grapadoras portatiles faciles de utilizar"},
     {nombre: "cojines", precio: "50000",foto: "../imgTienda/tienda9.jpg", descripcion:" duo de cojines 100% algodon cubiertos con tela termica"},
-    {nombre: "juego de baño", precio: "150000",foto: "../imgTienda/tienda10.jpg", descripcion:" hermosos tapetes para decorar tu baño impermeables"}
+    {nombre: "juego de baño", precio: "150000",foto: "../imgTienda/tienda10.jpg", descripcion:" hermosos tapetes para decorar tu baño impermeables"},
 ]
 
 //Rutina para recorrer el arreglo y crear las tarjetas de cada producto
@@ -27,7 +27,7 @@ let productos =[
     let pr=document.createElement("img")
     pr.src=producto.foto
 
-    console.log(producto.foto)
+    //console.log(producto.foto)
 
     //3. CREAMOS LOS ELEMENTOS NECESARIOS PARA PINTAR LOS PRODUCTOS
     let columna=document.createElement("div")
@@ -60,6 +60,10 @@ let productos =[
     precio.textContent="$"+producto.precio
 
     let descripcion=document.createElement("h4")
+    descripcion.classList.add("text-center")
+    descripcion.classList.add("invisible")
+    descripcion.textContent=producto.descripcion
+
 
     let botonAmpliarInfo=document.createElement("button")
     botonAmpliarInfo.setAttribute("type","button")
@@ -68,6 +72,7 @@ let productos =[
     botonAmpliarInfo.classList.add("mx-3")
     botonAmpliarInfo.classList.add("mb-3")
     botonAmpliarInfo.textContent="Ver producto"
+    
 
 
     //VAMOS A ANCLAR (PONER) LAS ETIQUETAS
@@ -76,6 +81,7 @@ let productos =[
     tarjeta.appendChild(separador)
     tarjeta.appendChild(nombre)
     tarjeta.appendChild(precio)
+    tarjeta.appendChild(descripcion)
     tarjeta.appendChild(botonAmpliarInfo)
     
     columna.appendChild(tarjeta)

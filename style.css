@@ -9,10 +9,14 @@ background: linear-gradient(90deg, rgb(143, 173, 228) 0%, rgba(219, 183, 223, 0.
 .fondobanner{
 
     background-image: url("img/fondo.jpg");
-        height: 550px;
-        background-attachment: fixed;
-        background-position: top center;
+    height: 550px;
+    background-attachment: fixed;
+    background-position: top center;
 
-    }
+}
+
+.fondoTienda{
+    background-image: url("img/fondo.jpg");
+}
     
 
