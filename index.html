@@ -73,32 +73,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
 
         </div>
 
-        <section class="mt-5 p-3"> 
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
-                  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <div>
-                    Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
-                  </div>
-                  <div class="dropdown mt-3">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                      nuestros productos
-                    </button>
-                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <li><a class="dropdown-item" href="tienda.html">tienda</a></li>
-                      <li><a class="dropdown-item" href="acercade.html">Acerca de</a></li>
-                      <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-      </section>
-
       <section class="fondobanner">
       </section>
+
       <section>
       <div class="container mt-5 animate__animated animate__zoomIn text-dark">
         <div class="row">
@@ -123,6 +100,7 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
                  <h5 class="card-title">Card title</h5>
                  <p class="card-text">Lo que empezó como un monedero de vinilo para niñas en 1974, hoy está presente en más de 50.000 productos. Entre ellos los más de moda, como en móviles, accesorios para coches, ropa, material escolar, portátiles, juguetes, electrodomésticos…</p>
                </div>
+               <img src="img/img14.jpg" class="card-img-top" alt="foto1">
              </div>
            </div>
            <div class="col">
@@ -147,7 +125,38 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
        </div>
       </section>
     </main>
-    
+
+    <section>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Registro</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="container">
+  
+            <img src="img/dc3.jpg" alt="fotoform" class="w-100 img-fluid">
+  
+            <form>
+  
+              <div class="mb-3">
+                <label class="form-label">Correo</label>
+                <input type="email" class="form-control" id="cajaemail">
+              </div>
+  
+              <div class="mb-3">
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" id="cajapassword">
+              </div>
+  
+              <button type="submit" class="btn btn-primary" id="botonregistro">Registrate</button>
+  
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer class="bg-dark mt-4 p-3 text-white">
      <div class="container">
        <div class="row">
@@ -175,6 +184,8 @@ href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     <script>
     new WOW().init();
     </script>
+    <script src="js/firebase.js" type="module"></script>
+    <script src="js/registrarusuario.js" type="module"></script>
 
 </body>
 
