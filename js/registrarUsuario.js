@@ -3,6 +3,11 @@ import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com
 
 //1. Para registrar a una persona en su app
 let botonRegistro=document.getElementById("botonregistro")
+
+ // 1.1 creo referencia global a la ventana modal
+let modalLogin=new boostrap.Modal(document.getElementById("modallogin"))
+let mensajelogin=document.getElementById("mensajelogin")
+
 botonRegistro.addEventListener("click",function(event){
     event.preventDefault()
     
@@ -12,6 +17,7 @@ botonRegistro.addEventListener("click",function(event){
 
     //VALIDAR EL FORMULARIO
 
+
     //AGREGAR LA RUTINA PARA LLEVAR LOS DATOS FIREBASE
     //(HABLAR CON EL BACK)
     const auth = getAuth();
@@ -20,12 +26,18 @@ botonRegistro.addEventListener("click",function(event){
         // Signed in
         const user = userCredential.user;
         // ...
-        console.log("TODO BN PAPA")
+    mensajelogin.textContent= "registro exitoso"
+    modalLogin.show()
+    console.log("TODO BN PAPA")
     })
+
     .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
     // ..
+
+        mensajelogin.textContent=`Error: ${errorCode} : ${errormessege}`
+        modalLogin.show()
         console.log("ERROR")
 
     });
